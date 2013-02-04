@@ -1,0 +1,14 @@
+D:\Privat\Clemens\Programmierung\C#\DataForest\DataForest\DataForest\bin\Debug\DataForest.exe
+D:\Privat\Clemens\Programmierung\C#\DataForest\DataForest\DataForest\bin\Debug\DataForest.pdb
+D:\Privat\Clemens\Programmierung\C#\DataForest\DataForest\DataForest\obj\x86\Debug\MainWindow.baml
+D:\Privat\Clemens\Programmierung\C#\DataForest\DataForest\DataForest\obj\x86\Debug\MainWindow.g.cs
+D:\Privat\Clemens\Programmierung\C#\DataForest\DataForest\DataForest\obj\x86\Debug\App.g.cs
+D:\Privat\Clemens\Programmierung\C#\DataForest\DataForest\DataForest\obj\x86\Debug\DataForest_MarkupCompile.cache
+D:\Privat\Clemens\Programmierung\C#\DataForest\DataForest\DataForest\obj\x86\Debug\DataForest.g.resources
+D:\Privat\Clemens\Programmierung\C#\DataForest\DataForest\DataForest\obj\x86\Debug\DataForest.Properties.Resources.resources
+D:\Privat\Clemens\Programmierung\C#\DataForest\DataForest\DataForest\obj\x86\Debug\DataForest.exe
+D:\Privat\Clemens\Programmierung\C#\DataForest\DataForest\DataForest\obj\x86\Debug\DataForest.pdb
+D:\Privat\Clemens\Programmierung\C#\DataForest\DataForest\DataForest\obj\x86\Debug\DataForest.csprojResolveAssemblyReference.cache
+D:\Privat\Clemens\Programmierung\C#\DataForest\DataForest\DataForest\obj\x86\Debug\DataForest.csproj.GenerateResource.Cache
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest.exe
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest.pdb
