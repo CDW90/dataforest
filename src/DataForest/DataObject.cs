@@ -11,11 +11,11 @@ namespace Dataforest
 	using System.Linq;
 	using System.Text;
 
-	public class Object
+	public class DataObject
 	{
-		private IEnumerable<Object> data;
+		private IEnumerable<Attribut> data;
 
-		public virtual IEnumerable<Object> Data
+		public virtual IEnumerable<Attribut> Data
 		{
 			get;
 			set;

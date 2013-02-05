@@ -20,7 +20,7 @@
                 <MenuItem Header="Baum automatisch erstellen" />
             </MenuItem>
         </Menu>
-        <TabControl Name="tabControl1" Grid.RowSpan="2" Grid.Row="1" SelectionChanged="tabControl1_SelectionChanged">
+        <TabControl Name="tabControl1" Grid.RowSpan="2" Grid.Row="1">
             <TabItem Header="Tabellenansicht" Name="tabItem1">
                 <Grid Name="grid1">
                     <Grid.RowDefinitions>

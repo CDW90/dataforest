@@ -42,11 +42,11 @@
       <FileName>StringAttribut.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dataforest.Object" Collapsed="true">
+  <Class Name="Dataforest.DataObject" Collapsed="true">
     <Position X="3.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAA=</HashCode>
-      <FileName>Objekt.cs</FileName>
+      <FileName>DataObject.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Dataforest.Tree" Collapsed="true">

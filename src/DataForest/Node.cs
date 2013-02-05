@@ -65,7 +65,7 @@ namespace Dataforest
 		{
 		}
 
-		public virtual void put(Object obj)
+		public virtual void put(DataObject obj)
 		{
 			throw new System.NotImplementedException();
 		}

@@ -13,7 +13,7 @@ namespace Dataforest
 
 	public class Table
 	{
-		private IEnumerable<Object> objects;
+		private IEnumerable<DataObject> objects;
 
 		private IEnumerable<Attribut> attributs;
 
@@ -27,22 +27,35 @@ namespace Dataforest
 			throw new System.NotImplementedException();
 		}
 
-		public virtual bool addObject(Object obj)
+		public virtual bool addObject(DataObject obj)
 		{
 			throw new System.NotImplementedException();
 		}
 
-		public virtual void deleteObject(Object obj)
+		public virtual void deleteObject(DataObject obj)
 		{
 			throw new System.NotImplementedException();
 		}
 
-		public virtual Attribut getAttribut(string name, object index)
+		public virtual Attribut getAttribut(string name, int index)
 		{
+            int indx = 0;
+            DataObject currentObjekt = objects.ElementAt(index);
+            foreach (Attribut t in attributs)
+            {
+                if (t.Name == name)
+                    break;
+                else
+                    indx++;
+            }
+           
+            return currentObjekt.Data.ElementAt(indx);
+            //  objects.ElementAt(index).Data.FirstOrDefault(attr => attr.Name == name);
+
 			throw new System.NotImplementedException();
 		}
 
-		public virtual void setAttribut1(string name, object index, Attribut attr)
+		public virtual void setAttribut1(string name, int index, Attribut attr)
 		{
 			throw new System.NotImplementedException();
 		}
