@@ -7,26 +7,39 @@
 namespace Dataforest
 {
 	using System;
-	using System.Collections.Generic;
+    using System.Collections.Generic;
+    using System.Data;
 	using System.Linq;
 	using System.Text;
+    using System.Collections.ObjectModel;
 
 	public class Tree
 	{
 		private Node startNode;
 
-		private IEnumerable<Attribut> tabuList;
+        private ObservableCollection<DataColumn> tabuList;
 
 		public virtual Node StartNode
 		{
-			get;
-			set;
+            get
+            {
+                return startNode;
+            }
+            set
+            {
+                startNode = value;
+            }
 		}
 
-		public virtual IEnumerable<Attribut> TabuList
+		public virtual Collection<DataColumn> TabuList
 		{
-			get;
-			set;
+			get {
+                return tabuList;   
+            }
+            set
+            {
+                tabuList = (ObservableCollection<DataColumn>)value;
+            }
 		}
 
 		public virtual Table Table
@@ -35,11 +48,11 @@ namespace Dataforest
 			set;
 		}
 
-		public Tree(object objs)
+		public Tree(DataRow row)
 		{
 		}
 
-		public Tree(object objs, Attribut firstAttri)
+		public Tree(DataRow row, string column)
 		{
 		}
 

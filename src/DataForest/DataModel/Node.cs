@@ -6,10 +6,11 @@
 //------------------------------------------------------------------------------
 namespace Dataforest
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Text;
 
 	public class Node
 	{
@@ -21,14 +22,19 @@ namespace Dataforest
 
 		private object objects;
 
-		private Attribut attribut;
+		private string attribut;
 
 		private Tree tree;
-
-		public virtual Attribut Attribut
+		public string Attribut
 		{
-			get;
-			set;
+            get
+            {
+                return attribut;
+            }
+            set
+            {
+                attribut = value;
+            }
 		}
 
 		public virtual object ChildNodes
@@ -65,7 +71,7 @@ namespace Dataforest
 		{
 		}
 
-		public virtual void put(DataObject obj)
+		public virtual void put(DataRow row)
 		{
 			throw new System.NotImplementedException();
 		}
@@ -80,7 +86,7 @@ namespace Dataforest
 			throw new System.NotImplementedException();
 		}
 
-		public virtual Attribut getOptimalAttribut()
+		public string getOptimalAttribut()
 		{
 			throw new System.NotImplementedException();
 		}

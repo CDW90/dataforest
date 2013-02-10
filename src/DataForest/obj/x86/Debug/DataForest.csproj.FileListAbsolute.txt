@@ -24,3 +24,17 @@ C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\o
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\DataForest.csproj.GenerateResource.Cache
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\bin\Debug\DataForest.exe
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\bin\Debug\DataForest.pdb
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest.csprojResolveAssemblyReference.cache
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\View\MainWindow.baml
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\View\MainWindow.g.cs
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\View\App.g.cs
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest_MarkupCompile.cache
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest.g.resources
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest.Properties.Resources.resources
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest.csproj.GenerateResource.Cache
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\bin\Debug\DataForest.exe
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\bin\Debug\DataForest.pdb
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\View\TableView.baml
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\View\TreeView.baml
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\View\TableView.g.cs
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\View\TreeView.g.cs

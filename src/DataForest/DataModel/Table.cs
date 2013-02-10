@@ -14,6 +14,7 @@ namespace Dataforest
 
 	public class Table : DataTable
 	{
+        
 	}
 }
 
