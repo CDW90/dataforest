@@ -4,7 +4,7 @@
 //     Wenn der Code neu generiert wird, gehen alle Änderungen an dieser Datei verloren
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace Dataforest
+namespace Dataforest.DataModel
 {
 	using System;
     using System.Collections.Generic;
@@ -12,6 +12,7 @@ namespace Dataforest
 	using System.Linq;
 	using System.Text;
     using System.Collections.ObjectModel;
+    using DataModel;
 
 	public class Tree
 	{

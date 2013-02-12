@@ -4,7 +4,7 @@
 //     Wenn der Code neu generiert wird, gehen alle Änderungen an dieser Datei verloren
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace Dataforest
+namespace Dataforest.DataModel
 {
     using System;
     using System.Collections.Generic;
@@ -14,13 +14,13 @@ namespace Dataforest
 
 	public class Node
 	{
-		private object splitValue;
+		private double splitValue;
 
 		private string name;
 
-		private object childNodes;
+		private List<Node> childNodes;
 
-		private object objects;
+		private DataRow objects;
 
 		private string attribut;
 
@@ -37,7 +37,7 @@ namespace Dataforest
             }
 		}
 
-		public virtual object ChildNodes
+		public virtual List<Node> ChildNodes
 		{
 			get;
 			set;
@@ -49,13 +49,13 @@ namespace Dataforest
 			set;
 		}
 
-		public virtual object Objects
+		public virtual DataRow Objects
 		{
 			get;
 			set;
 		}
 
-		public virtual object SplitValue
+		public virtual double SplitValue
 		{
 			get;
 			set;
@@ -67,7 +67,7 @@ namespace Dataforest
 			set;
 		}
 
-		public Node(object objs, Tree tree)
+		public Node(DataRow[] row, Tree tree)
 		{
 		}
 

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace DataForest.View
 {
     /// <summary>
-    /// Interaktionslogik für UserControl1.xaml
+    /// Interaktionslogik für TableView.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class TableView : UserControl
     {
-        public UserControl1()
+        public TableView()
         {
             InitializeComponent();
         }
