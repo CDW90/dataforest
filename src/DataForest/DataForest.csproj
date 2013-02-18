@@ -66,6 +66,7 @@
     <Compile Include="DataModel\Tree.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="Utilities\RelayCommand.cs" />
+    <Compile Include="ViewModel\OpenFileDialogVM.cs" />
     <Compile Include="View\TableView.xaml.cs">
       <DependentUpon>TableView.xaml</DependentUpon>
     </Compile>
