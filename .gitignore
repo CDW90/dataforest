@@ -28,3 +28,6 @@ obj/
 _ReSharper*/
 *.i.cache
 src/DataForest/obj/
+src/DataForest/[Dd]ebug*/
+src/DataForest/[Bb]in
+src/DataForest/_ReSharper*/

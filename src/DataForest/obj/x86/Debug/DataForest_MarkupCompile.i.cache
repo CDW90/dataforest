@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\
 DataForest
 none
 false
 DEBUG;TRACE
-C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\Utilities\App.xaml
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\Utilities\App.xaml
 3-1696652467
 
-18-1373209232
+18-550653444
 14-629149121
 View\MainWindowView.xaml;View\TableView.xaml;View\TreeView.xaml;
 
-False
+True
 
