@@ -14,10 +14,13 @@
         </Grid.RowDefinitions>
         <Menu Height="23" x:Name="menu1" VerticalAlignment="Top" Grid.RowSpan="2">
             <MenuItem Header="Datei">
-                <MenuItem Header="Neu" Command="{Binding NewCommand}"/>
+                <MenuItem Header="Neu">
+                    <MenuItem Header="Tabelle" Command="{Binding NewTableCommand}"/>
+                    <MenuItem Header="Baum" Command="{Binding NewTreeCommand}"/>
+                </MenuItem>
                 <MenuItem Header="Öffnen" Command="{Binding OpenCommand}" />
-                <MenuItem Header="Speichern" />
-                <MenuItem Header="Speichern unter..." />
+                <MenuItem Header="Speichern"  />
+                <MenuItem Header="Speichern unter..." Command="{Binding SaveCommand}" />
                 <MenuItem Header="Beenden" Command="{Binding CloseCommand}" />
             </MenuItem>
             <MenuItem Header="Baumdarstellung">
@@ -25,12 +28,12 @@
                 <MenuItem Header="Baum automatisch erstellen" Command="{Binding CreateOptimalTreeCommand}"/>
             </MenuItem>
         </Menu>
-        <TabControl x:Name="tabControl1" Grid.RowSpan="2" Grid.Row="1" ItemsSource="{Binding Tabs}" >
+        <TabControl x:Name="tabControl1" Grid.RowSpan="2" Grid.Row="1" ItemsSource="{Binding Tabs}" SelectedItem="{Binding SelectedTab}" >
             <TabControl.ItemTemplate>
-                <DataTemplate DataType="ViewModel:TableTabModel">
+                <DataTemplate DataType="ViewModel:TabModel">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Name}" HorizontalAlignment="Left" />
-                        <Button Content="X" HorizontalAlignment="Right" Margin="20,0,0,0" Width="15" Height="15" Command="{Binding CloseTabCommand}"/>
+                        <Button Content="X" HorizontalAlignment="Right" Margin="20,0,0,0" Width="15" Height="15" Command="{Binding CloseTabCommand}" FontSize="8" FontWeight="Bold"/>
                     </StackPanel>
                 </DataTemplate>
             </TabControl.ItemTemplate>

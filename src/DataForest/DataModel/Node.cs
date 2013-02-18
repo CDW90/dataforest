@@ -4,7 +4,7 @@
 //     Wenn der Code neu generiert wird, gehen alle Änderungen an dieser Datei verloren
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace Dataforest.DataModel
+namespace DataForest.DataModel
 {
     using System;
     using System.Collections.Generic;

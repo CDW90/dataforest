@@ -9,7 +9,7 @@
             <RowDefinition Height="329*" />
             <RowDefinition Height="32" />
         </Grid.RowDefinitions>
-        <DataGrid AutoGenerateColumns="True" Name="dataGrid1" FrozenColumnCount="16" ItemsSource="{Binding Data.DefaultView}" >
+        <DataGrid AutoGenerateColumns="True" Name="dataGrid1" FrozenColumnCount="16" ItemsSource="{Binding Data.DefaultView, UpdateSourceTrigger=PropertyChanged}" >
         </DataGrid>
         <Button Content="Attribut hinzufügen" Grid.Row="1" Height="24" HorizontalAlignment="Left" Margin="0,3,0,0" Name="button1" VerticalAlignment="Top" Width="129" />
         <Button Content="Baum auomatisch erstellen" Grid.Row="1" Height="23" Margin="0,4,4,0" Name="button2" VerticalAlignment="Top" HorizontalAlignment="Right" Width="147" />

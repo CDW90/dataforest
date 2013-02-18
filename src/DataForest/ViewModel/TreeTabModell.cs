@@ -10,6 +10,11 @@ namespace DataForest.ViewModel
 {
     public class TreeTabModel : TabModel
     {
+        public TreeTabModel(string name) : base (name)
+        {
+            
+           
+        }
         private ObservableCollection<Shape> tree;
     }
 }

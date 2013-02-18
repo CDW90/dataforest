@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Input;
 
-namespace DataForest.ViewModel
+namespace DataForest.Utilities
 {
     /// <summary>
     /// A command whose sole purpose is to 

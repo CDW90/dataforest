@@ -15,9 +15,6 @@ D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest.p
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\DataForest.exe
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\DataForest.pdb
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\DataForest.csprojResolveAssemblyReference.cache
-C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\MainWindow.baml
-C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\MainWindow.g.cs
-C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\App.g.cs
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\DataForest_MarkupCompile.cache
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\DataForest.g.resources
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\DataForest.Properties.Resources.resources
@@ -60,3 +57,12 @@ D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\View\MainWin
 D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest_MarkupCompile.lref
 D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\View\MainWindowView.baml
 D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\View\TableView.baml
+C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\View\TreeView.baml
+C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\View\MainWindowView.g.cs
+C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\View\TableView.g.cs
+C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\View\TreeView.g.cs
+C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\DataForest_MarkupCompile.lref
+C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\View\MainWindowView.baml
+C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\Utilities\App.g.cs

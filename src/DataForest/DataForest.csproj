@@ -56,7 +56,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="View\App.xaml">
+    <ApplicationDefinition Include="Utilities\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
@@ -64,7 +64,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataModel\Tree.cs" />
-    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="Utilities\RelayCommand.cs" />
     <Compile Include="View\TableView.xaml.cs">
       <DependentUpon>TableView.xaml</DependentUpon>
     </Compile>
@@ -79,7 +80,7 @@
     <Compile Include="ViewModel\TableTabModel.cs" />
     <Compile Include="ViewModel\TreeTabModell.cs" />
     <Compile Include="ViewModel\MainWindowModel.cs" />
-    <Compile Include="View\App.xaml.cs">
+    <Compile Include="Utilities\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>

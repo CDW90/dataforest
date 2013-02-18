@@ -11,9 +11,8 @@ namespace DataForest.ViewModel
 {
     public class TableTabModel : TabModel
     {
-        public TableTabModel()
+        public TableTabModel(string name) : base (name)
         {
-            this.Name = "Neue Tabelle";
             Data.Columns.Add("Col1", typeof(string));
             Data.Columns.Add("Col2", typeof(string));
             Data.Columns.Add("Col3", typeof(string));

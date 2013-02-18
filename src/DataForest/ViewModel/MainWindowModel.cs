@@ -5,37 +5,68 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using DataForest.ViewModel;
+using DataForest.Utilities;
+using System.Windows.Forms;
+using DataForest.DataModel;
 
 namespace DataForest.ViewModel
 {
-    public class MainWindowModel
+    public class MainWindowModel : BaseViewModel
     {
         public MainWindowModel()
         {
             Tabs = new ObservableCollection<TabModel>();
-            Tabs.Add(new TableTabModel());
-            Tabs.Add(new TreeTabModel());
+            NewTable();
 
         }
 
 
-
-
         private RelayCommand closeCommand;
         private RelayCommand openCommand;
-        private RelayCommand newCommand;
+        private RelayCommand saveCommand;
+        private RelayCommand newtableCommand;
+        private RelayCommand newtreeCommand;
         private RelayCommand createOptimalTreeCommand;
         private RelayCommand createInteractiveTreeCommand;
+        private TabModel selectedTab;
 
-        public ICommand NewCommand
+        public TabModel SelectedTab
         {
             get
             {
-                if (newCommand == null)
+                return selectedTab;
+            }
+            set
+            {
+                if (value != selectedTab)
                 {
-                    newCommand = new RelayCommand(param => New());
+                    selectedTab = value;
+                    OnPropertyChanged("SelectedTab");
                 }
-                return newCommand;
+            }
+        }
+
+
+        public ICommand NewTableCommand
+        {
+            get
+            {
+                if (newtableCommand == null)
+                {
+                    newtableCommand = new RelayCommand(param => NewTable());
+                }
+                return newtableCommand;
+            }
+        }
+        public ICommand NewTreeCommand
+        {
+            get
+            {
+                if (newtreeCommand == null)
+                {
+                    newtreeCommand = new RelayCommand(param => NewTree());
+                }
+                return newtreeCommand;
             }
         }
         public ICommand OpenCommand
@@ -83,24 +114,73 @@ namespace DataForest.ViewModel
             
         }
 
-        public ObservableCollection<TabModel> Tabs { get; set; }
 
-        public EventHandler RequestClose { get; set; }
+        public ObservableCollection<TabModel> Tabs
+        {
+            get;
+            set;
+        }
+
+        public event EventHandler RequestClose;
+       
 
         private void Close()
         {
-            throw new NotImplementedException(); 
+            if (RequestClose != null) 
+            {
+                RequestClose(this, null);
+            }
+           
+        }
+        public ICommand SaveCommand
+        {
+            get
+            {
+                if (saveCommand == null)
+                {
+                    saveCommand = new RelayCommand(param => Save());
+                }
+                return saveCommand;
+            }
+        }
+
+        private void Save()
+        {
+            SelectedTab.Save();
         }
 
         private void Open()
         {
-            throw new NotImplementedException();
+            List<string> error = new List<string>();
+            string path = "";
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "Zeichensepariert (*.txt,*.csv)|*.txt; *.csv";
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+                path = fileDialog.FileName;
+            TabModel tab = NewTable();
+            tab.Data = Table.ReadFromCSV(path, ";",out error);
         }
 
-        private void New()
+        private TabModel NewTable()
         {
-            System.Windows.MessageBox.Show("Klappt");
-            //throw new NotImplementedException();
+            var tab = new TableTabModel("Neue Tabelle") { };
+            Tabs.Add(tab);
+            tab.TabCloseRequest += CloseTab;
+            SelectedTab = tab;
+            return tab;
+        }
+
+        private void NewTree()
+        {
+            var tab = new TreeTabModel ("Neuer Baum"){ };
+            Tabs.Add(tab);
+            tab.TabCloseRequest += CloseTab;
+            SelectedTab = tab;
+        }
+
+        private void CloseTab (object sender, EventArgs e)
+        {
+            Tabs.Remove(sender as TabModel);
         }
 
         private void CreateOptimalTree()
