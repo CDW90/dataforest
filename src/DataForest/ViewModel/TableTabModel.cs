@@ -13,8 +13,12 @@ namespace DataForest.ViewModel
     {
         public TableTabModel()
         {
-            this.Content = new DataForest.View.TableView();
             this.Name = "Neue Tabelle";
+            Data.Columns.Add("Col1", typeof(string));
+            Data.Columns.Add("Col2", typeof(string));
+            Data.Columns.Add("Col3", typeof(string));
+            Data.Rows.Add(new object[] { "hallo", "welt", "1" });
+            Data.Rows.Add(new object[] { "hallo", "computer", "2" });
         }
         
     }

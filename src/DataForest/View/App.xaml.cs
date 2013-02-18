@@ -24,7 +24,14 @@ namespace DataForest
             // Create the ViewModel to which 
             // the main window binds.
             MainWindowModel viewModel = new MainWindowModel();
-            
+
+            // Bind Commands to Handlers
+            //window.CommandBindings.Add(viewModel.OpenCommandBinding);
+            //window.CommandBindings.Add(viewModel.NewCommandBinding);
+            //window.CommandBindings.Add(viewModel.CloseCommandBinding);
+            //window.CommandBindings.Add(viewModel.CreateInteractiveTreeCommandBinding);
+            //window.CommandBindings.Add(viewModel.CreateOptimalTreeCommandBinding);
+
             // When the ViewModel asks to be closed, 
             // close the window.
             EventHandler handler = null;

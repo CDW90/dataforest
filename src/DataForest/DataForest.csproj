@@ -64,6 +64,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataModel\Tree.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="View\TableView.xaml.cs">
       <DependentUpon>TableView.xaml</DependentUpon>
     </Compile>

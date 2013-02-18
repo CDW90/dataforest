@@ -10,13 +10,18 @@ namespace DataForest.ViewModel
 {
     public abstract class TabModel
     {
-        RoutedCommand CloseTabCommand = new RoutedCommand();
-        RoutedCommand SaveCommand = new RoutedCommand();
-        RoutedCommand SaveAsCommand = new RoutedCommand();
+        public TabModel()
+        {
+            this.Name = "Neuer Tab";
+            this.Data = new DataTable();
+        }
 
-        public UserControl Content { get; set; }
+        RelayCommand CloseTabCommand;
+        RelayCommand SaveCommand;
+        RelayCommand SaveAsCommand;
+
         public string Name { get; set; }
-        public DataTable data { get; set; }
+        public DataTable Data { get; set; }
         
     }
 }

@@ -5,32 +5,7 @@
         xmlns:View="clr-namespace:DataForest.View"
         x:Class="DataForest.MainWindowView"
         Title="MainWindow" Height="462" Width="691" Background="#FF005207">
-
-    <Window.Resources>
-        <DataTemplate x:Key="ClosableTabItemTemplate">
-            <DockPanel Width="120">
-                <Button 
-        Command="{Binding Path=CloseCommand}"
-        Content="X"
-        Cursor="Hand"
-        DockPanel.Dock="Right"
-        Focusable="False"
-        FontFamily="Courier" 
-        FontSize="9"
-        FontWeight="Bold"  
-        Margin="0,1,0,0"
-        Padding="0"
-        VerticalContentAlignment="Bottom"
-        Width="16" Height="16" 
-        />
-                <ContentPresenter 
-        Content="{Binding Path=DisplayName}" 
-        VerticalAlignment="Center" 
-        />
-            </DockPanel>
-        </DataTemplate>
-
-    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="22" />
@@ -39,19 +14,40 @@
         </Grid.RowDefinitions>
         <Menu Height="23" x:Name="menu1" VerticalAlignment="Top" Grid.RowSpan="2">
             <MenuItem Header="Datei">
-                <MenuItem Header="Neu" />
-                <MenuItem Header="Öffnen" />
+                <MenuItem Header="Neu" Command="{Binding NewCommand}"/>
+                <MenuItem Header="Öffnen" Command="{Binding OpenCommand}" />
                 <MenuItem Header="Speichern" />
                 <MenuItem Header="Speichern unter..." />
-                <MenuItem Header="Beenden" />
+                <MenuItem Header="Beenden" Command="{Binding CloseCommand}" />
             </MenuItem>
             <MenuItem Header="Baumdarstellung">
-                <MenuItem Header="Baum interaktiv erstellen" />
-                <MenuItem Header="Baum automatisch erstellen" />
+                <MenuItem Header="Baum interaktiv erstellen" Command="{Binding CreateInteractiveTreeCommand}"/>
+                <MenuItem Header="Baum automatisch erstellen" Command="{Binding CreateOptimalTreeCommand}"/>
             </MenuItem>
         </Menu>
-        <TabControl x:Name="tabControl1" Grid.RowSpan="2" Grid.Row="1" ItemsSource="{Binding Tabs}" ContentTemplate="{DynamicResource ClosableTabItemTemplate}">
-
+        <TabControl x:Name="tabControl1" Grid.RowSpan="2" Grid.Row="1" ItemsSource="{Binding Tabs}" >
+            <TabControl.ItemTemplate>
+                <DataTemplate DataType="ViewModel:TableTabModel">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}" HorizontalAlignment="Left" />
+                        <Button Content="X" HorizontalAlignment="Right" Margin="20,0,0,0" Width="15" Height="15" Command="{Binding CloseTabCommand}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                    <ContentControl Content="{Binding}">
+                        <ContentControl.Resources>
+                            <DataTemplate DataType="{x:Type ViewModel:TableTabModel}">
+                                <View:TableView />
+                            </DataTemplate>
+                            <DataTemplate DataType="{x:Type ViewModel:TreeTabModel}">
+                                <View:TreeView/>
+                            </DataTemplate>
+                        </ContentControl.Resources>
+                    </ContentControl>
+                </DataTemplate>
+            </TabControl.ContentTemplate>
         </TabControl>
 
     </Grid>
