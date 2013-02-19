@@ -20,6 +20,7 @@ namespace DataForest.ViewModel
 
         }
 
+        private TabModel selectedTab;
 
         private RelayCommand closeCommand;
         private RelayCommand openCommand;
@@ -28,8 +29,7 @@ namespace DataForest.ViewModel
         private RelayCommand newtreeCommand;
         private RelayCommand createOptimalTreeCommand;
         private RelayCommand createInteractiveTreeCommand;
-        private TabModel selectedTab;
-
+        
         public TabModel SelectedTab
         {
             get
@@ -45,7 +45,11 @@ namespace DataForest.ViewModel
                 }
             }
         }
-
+        public ObservableCollection<TabModel> Tabs
+        {
+            get;
+            set;
+        }
 
         public ICommand NewTableCommand
         {
@@ -113,25 +117,6 @@ namespace DataForest.ViewModel
             }
             
         }
-
-
-        public ObservableCollection<TabModel> Tabs
-        {
-            get;
-            set;
-        }
-
-        public event EventHandler RequestClose;
-       
-
-        private void Close()
-        {
-            if (RequestClose != null) 
-            {
-                RequestClose(this, null);
-            }
-           
-        }
         public ICommand SaveCommand
         {
             get
@@ -144,6 +129,24 @@ namespace DataForest.ViewModel
             }
         }
 
+
+
+        public event EventHandler RequestClose;
+        public event EventHandler RequestOpenFileDialog;
+        public event EventHandler RequestSaveFileDialog;
+        public event EventHandler RequestOKDialog;
+        public event EventHandler RequestYesNoDialag;
+        public event EventHandler RequestErrorDialog;
+
+        private void Close()
+        {
+            if (RequestClose != null) 
+            {
+                RequestClose(this, null);
+            }
+           
+        }
+
         private void Save()
         {
             SelectedTab.Save();
@@ -152,7 +155,8 @@ namespace DataForest.ViewModel
         private void Open()
         {
             List<string> error = new List<string>();
-            string path = "";
+            RequestSaveFileDialog(this, null);
+
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.Filter = "Zeichensepariert (*.txt,*.csv)|*.txt; *.csv";
             if (fileDialog.ShowDialog() == DialogResult.OK)

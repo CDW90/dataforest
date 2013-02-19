@@ -22,7 +22,8 @@ namespace DataForest
         public MainWindowView()
         {
             InitializeComponent();
-            
         }
+
+        
     }
 }
