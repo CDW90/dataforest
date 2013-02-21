@@ -124,7 +124,39 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="View\Icons\tabclose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\addtable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\deletecolumns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\deleterows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\insertcolumns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\saveas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\games-solve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\tree_add.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

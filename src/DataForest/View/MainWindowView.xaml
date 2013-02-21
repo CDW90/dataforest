@@ -14,14 +14,25 @@
         </Grid.RowDefinitions>
         <Menu Height="23" x:Name="menu1" VerticalAlignment="Top" Grid.RowSpan="2">
             <MenuItem Header="Datei">
-                <MenuItem Header="Neu">
+                <MenuItem Header="Neu" >
+                    <MenuItem.Icon>
+                        <Image Source="Icons/addtable.png" />
+                    </MenuItem.Icon>
                     <MenuItem Header="Tabelle" Command="{Binding NewTableCommand}"/>
                     <MenuItem Header="Baum" Command="{Binding NewTreeCommand}"/>
                 </MenuItem>
                 <MenuItem Header="Öffnen" Command="{Binding OpenCommand}" />
-                <MenuItem Header="Speichern"  />
+                <MenuItem Header="Speichern">
+                    <MenuItem.Icon>
+                        <Image Source="Icons/save.png"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
                 <MenuItem Header="Speichern unter..." Command="{Binding SaveCommand}" />
-                <MenuItem Header="Beenden" Command="{Binding CloseCommand}" />
+                <MenuItem Header="Beenden" Command="{Binding CloseCommand}">
+                    <MenuItem.Icon>
+                        <Image Source="Icons/tabclose.png"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
             <MenuItem Header="Baumdarstellung">
                 <MenuItem Header="Baum interaktiv erstellen" Command="{Binding CreateInteractiveTreeCommand}"/>
@@ -33,7 +44,9 @@
                 <DataTemplate DataType="ViewModel:TabModel">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Name}" HorizontalAlignment="Left" />
-                        <Button Content="X" HorizontalAlignment="Right" Margin="20,0,0,0" Width="15" Height="15" Command="{Binding CloseTabCommand}" FontSize="8" FontWeight="Bold"/>
+                        <Button HorizontalAlignment="Right" Margin="20,0,0,0" Command="{Binding CloseTabCommand}" FontSize="8" FontWeight="Bold">
+                            <Image Source="Icons/tabclose.png" Width="10" Height="10"></Image>
+                        </Button>
                     </StackPanel>
                 </DataTemplate>
             </TabControl.ItemTemplate>
