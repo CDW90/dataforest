@@ -22,7 +22,6 @@ C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\o
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\bin\Debug\DataForest.exe
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\bin\Debug\DataForest.pdb
 D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest.csprojResolveAssemblyReference.cache
-D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\View\App.g.cs
 D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest_MarkupCompile.cache
 D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest.g.resources
 D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\DataForest.Properties.Resources.resources
@@ -66,3 +65,4 @@ C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\o
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\DataForest_MarkupCompile.lref
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\View\MainWindowView.baml
 C:\Users\Boris\Documents\Visual Studio 2012\Projects\dataforest\src\DataForest\obj\x86\Debug\Utilities\App.g.cs
+D:\Privat\Clemens\HWR\SWEII\DataForest\src\DataForest\obj\x86\Debug\Utilities\App.g.cs

@@ -155,8 +155,9 @@ namespace DataForest.ViewModel
         private void Open()
         {
             List<string> error = new List<string>();
-            RequestSaveFileDialog(this, null);
+            RequestOpenFileDialog(this, null);
 
+            string path = "";
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.Filter = "Zeichensepariert (*.txt,*.csv)|*.txt; *.csv";
             if (fileDialog.ShowDialog() == DialogResult.OK)
