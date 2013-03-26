@@ -3,68 +3,72 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ViewModel="clr-namespace:DataForest.ViewModel"
         xmlns:View="clr-namespace:DataForest.View"
+        xmlns:Dialog="clr-namespace:DataForest.View.Dialogs"
         x:Class="DataForest.MainWindowView"
-        Title="MainWindow" Height="462" Width="691" Background="#FF005207">
-    
+        Title="MainWindow" Height="657" Width="977" Background="#FF005207">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="22" />
-            <RowDefinition Height="368*" />
-            <RowDefinition Height="33" />
-        </Grid.RowDefinitions>
-        <Menu Height="23" x:Name="menu1" VerticalAlignment="Top" Grid.RowSpan="2">
-            <MenuItem Header="Datei">
-                <MenuItem Header="Neu" >
-                    <MenuItem.Icon>
-                        <Image Source="Icons/addtable.png" />
-                    </MenuItem.Icon>
-                    <MenuItem Header="Tabelle" Command="{Binding NewTableCommand}"/>
-                    <MenuItem Header="Baum" Command="{Binding NewTreeCommand}"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="22" />
+                <RowDefinition Height="368*" />
+                <RowDefinition Height="33" />
+            </Grid.RowDefinitions>
+            <Menu Height="23" x:Name="menu1" VerticalAlignment="Top" Grid.RowSpan="2">
+                <MenuItem Header="Datei">
+                    <MenuItem Header="Neu" >
+                        <MenuItem.Icon>
+                            <Image Source="Icons/addtable.png" />
+                        </MenuItem.Icon>
+                        <MenuItem Header="Tabelle" Command="{Binding NewTableCommand}"/>
+                        <MenuItem Header="Baum" Command="{Binding NewTreeCommand}"/>
+                    </MenuItem>
+                    <MenuItem Header="Öffnen" Command="{Binding OpenCommand}" />
+                    <MenuItem Header="Speichern">
+                        <MenuItem.Icon>
+                            <Image Source="Icons/save.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Speichern unter..." Command="{Binding SaveCommand}" />
+                    <MenuItem Header="Beenden" Command="{Binding CloseCommand}">
+                        <MenuItem.Icon>
+                            <Image Source="Icons/tabclose.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
                 </MenuItem>
-                <MenuItem Header="Öffnen" Command="{Binding OpenCommand}" />
-                <MenuItem Header="Speichern">
-                    <MenuItem.Icon>
-                        <Image Source="Icons/save.png"></Image>
-                    </MenuItem.Icon>
+                <MenuItem Header="Baumdarstellung">
+                    <MenuItem Header="Baum interaktiv erstellen" Command="{Binding CreateInteractiveTreeCommand}"/>
+                    <MenuItem Header="Baum automatisch erstellen" Command="{Binding CreateOptimalTreeCommand}"/>
                 </MenuItem>
-                <MenuItem Header="Speichern unter..." Command="{Binding SaveCommand}" />
-                <MenuItem Header="Beenden" Command="{Binding CloseCommand}">
-                    <MenuItem.Icon>
-                        <Image Source="Icons/tabclose.png"></Image>
-                    </MenuItem.Icon>
-                </MenuItem>
-            </MenuItem>
-            <MenuItem Header="Baumdarstellung">
-                <MenuItem Header="Baum interaktiv erstellen" Command="{Binding CreateInteractiveTreeCommand}"/>
-                <MenuItem Header="Baum automatisch erstellen" Command="{Binding CreateOptimalTreeCommand}"/>
-            </MenuItem>
-        </Menu>
-        <TabControl x:Name="tabControl1" Grid.RowSpan="2" Grid.Row="1" ItemsSource="{Binding Tabs}" SelectedItem="{Binding SelectedTab}" >
-            <TabControl.ItemTemplate>
-                <DataTemplate DataType="ViewModel:TabModel">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Name}" HorizontalAlignment="Left" />
-                        <Button HorizontalAlignment="Right" Margin="20,0,0,0" Command="{Binding CloseTabCommand}" FontSize="8" FontWeight="Bold">
-                            <Image Source="Icons/tabclose.png" Width="10" Height="10"></Image>
-                        </Button>
-                    </StackPanel>
-                </DataTemplate>
-            </TabControl.ItemTemplate>
-            <TabControl.ContentTemplate>
-                <DataTemplate>
-                    <ContentControl Content="{Binding}">
-                        <ContentControl.Resources>
-                            <DataTemplate DataType="{x:Type ViewModel:TableTabModel}">
-                                <View:TableView />
-                            </DataTemplate>
-                            <DataTemplate DataType="{x:Type ViewModel:TreeTabModel}">
-                                <View:TreeView/>
-                            </DataTemplate>
-                        </ContentControl.Resources>
-                    </ContentControl>
-                </DataTemplate>
-            </TabControl.ContentTemplate>
-        </TabControl>
-
+            </Menu>
+            <TabControl x:Name="tabControl1" Grid.RowSpan="2" Grid.Row="1" ItemsSource="{Binding Tabs}" SelectedItem="{Binding SelectedTab}" >
+                <TabControl.ItemTemplate>
+                    <DataTemplate DataType="ViewModel:TabModel">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Name}" HorizontalAlignment="Left" />
+                            <Button HorizontalAlignment="Right" Margin="20,0,0,0" Command="{Binding CloseTabCommand}" FontSize="8" FontWeight="Bold">
+                                <Image Source="Icons/tabclose.png" Width="10" Height="10"></Image>
+                            </Button>
+                        </StackPanel>
+                    </DataTemplate>
+                </TabControl.ItemTemplate>
+                <TabControl.ContentTemplate>
+                    <DataTemplate>
+                        <ContentControl Content="{Binding}">
+                            <ContentControl.Resources>
+                                <DataTemplate DataType="{x:Type ViewModel:TableTabModel}">
+                                    <View:TableView />
+                                </DataTemplate>
+                                <DataTemplate DataType="{x:Type ViewModel:TreeTabModel}">
+                                    <View:TreeView/>
+                                </DataTemplate>
+                            </ContentControl.Resources>
+                        </ContentControl>
+                    </DataTemplate>
+                </TabControl.ContentTemplate>
+            </TabControl>
+        </Grid>
+        <UserControl Visibility="{Binding Path=DialogVisibility, FallbackValue=Hidden}">
+            <Dialog:DialogContainerView DataContext="{Binding Dialog, UpdateSourceTrigger=PropertyChanged}"/>
+        </UserControl>
     </Grid>
 </Window>

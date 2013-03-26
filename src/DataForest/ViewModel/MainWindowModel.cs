@@ -132,11 +132,6 @@ namespace DataForest.ViewModel
 
 
         public event EventHandler RequestClose;
-        public event EventHandler RequestOpenFileDialog;
-        public event EventHandler RequestSaveFileDialog;
-        public event EventHandler RequestOKDialog;
-        public event EventHandler RequestYesNoDialag;
-        public event EventHandler RequestErrorDialog;
 
         private void Close()
         {
@@ -155,15 +150,15 @@ namespace DataForest.ViewModel
         private void Open()
         {
             List<string> error = new List<string>();
-            RequestOpenFileDialog(this, null);
-
+            this.ShowFileDialog("Test");
+            /*
             string path = "";
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.Filter = "Zeichensepariert (*.txt,*.csv)|*.txt; *.csv";
             if (fileDialog.ShowDialog() == DialogResult.OK)
                 path = fileDialog.FileName;
             TabModel tab = NewTable();
-            tab.Data = Table.ReadFromCSV(path, ";",out error);
+            tab.Data = Table.ReadFromCSV(path, ";",out error);*/
         }
 
         private TabModel NewTable()

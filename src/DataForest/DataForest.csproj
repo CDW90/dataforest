@@ -64,15 +64,41 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataModel\Tree.cs" />
+    <Compile Include="View\Dialogs\Converter\BooleanToVisibilityConverter.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="Utilities\RelayCommand.cs" />
+    <Compile Include="ViewModel\Dialogs\BaseDialogModel.cs" />
+    <Compile Include="ViewModel\Dialogs\FileDialogModel.cs" />
+    <Compile Include="ViewModel\Dialogs\MessageDialogModel.cs" />
     <Compile Include="ViewModel\OpenFileDialogVM.cs" />
+    <Compile Include="View\Dialogs\Converter\DriveInfoToUsedSpaceConverter.cs" />
+    <Compile Include="View\Dialogs\Converter\DriveInfoToIconConverter.cs" />
+    <Compile Include="View\Dialogs\Converter\DriveInfoToTotalSpaceConverter.cs" />
+    <Compile Include="View\Dialogs\Converter\DriveInfoToLabelConverter.cs" />
+    <Compile Include="View\Dialogs\DialogContainerView.xaml.cs">
+      <DependentUpon>DialogContainerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialogs\FileDialogView.xaml.cs">
+      <DependentUpon>FileDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialogs\Converter\FileInfoToIconConverter.cs" />
+    <Compile Include="View\Dialogs\MessageDialogView.xaml.cs">
+      <DependentUpon>MessageDialogView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TableView.xaml.cs">
       <DependentUpon>TableView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TreeView.xaml.cs">
       <DependentUpon>TreeView.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\Dialogs\DialogContainerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Dialogs\FileDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -89,6 +115,10 @@
       <DependentUpon>MainWindowView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Dialogs\MessageDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\TableView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -156,6 +186,46 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Icons\tree_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\Folder_16x16.png" />
+    <Resource Include="View\Icons\Folder_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\Generic_Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\Forward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\Back.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\NewFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\FolderUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\HDD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\NewFolder.ico" />
+    <Resource Include="View\Icons\FolderUp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Icons\Computer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
